@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .one {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid black;
+        }
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .three {
+            width: 70px;
+            height: 70px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="one">
+        <div class="two">
+            <div class="three">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const callOuter = (e) => {
+            console.table([
+                {
+                    Description: 'I am outer one',
+                    Target: e.target,
+                    currentTarget: e.currentTarget
+                }
+            ]);
+        };
+
+        const callMiddle = (e) => {
+            console.table([
+                {
+                    Description: 'I am middle one',
+                    Target: e.target,
+                    currentTarget: e.currentTarget
+                },
+
+            ]);
+            e.stopPropagation()
+        };
+
+        const callInner = (e) => {
+            console.table([
+                {
+                    Description: 'I am inner one',
+                    Target: e.target,
+                    currentTarget: e.currentTarget,
+                }
+            ]);
+            e.stopPropagation()
+        };
+
+        document.querySelector('.one').addEventListener('click', callOuter);
+        document.querySelector('.two').addEventListener('click', callMiddle);
+        document.querySelector('.three').addEventListener('click', callInner);
+    </script>
+
+</body>
+</html>

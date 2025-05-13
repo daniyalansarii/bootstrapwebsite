@@ -1,0 +1,17 @@
+.grey{
+    width: 50%;
+    filter: grayscale();
+}
+
+.blur{
+    width: 50%;
+    filter:blur(2px);
+}
+.brightness{
+    width: 50%;
+    filter: brightness(150%);
+}
+.contrast{
+    width: 50%;
+    filter: contrast(150%);
+}

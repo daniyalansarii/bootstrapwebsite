@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple ToDo App</h1>
+    <input type="text" id="inputelem">
+    <button class="btn">Add</button>
+    <div class="todo-list"></div>
+
+    <script>
+        let getInput = document.querySelector('#inputelem');
+        let getBtn = document.querySelector('.btn');
+        let getDiv = document.querySelector('.todo-list');
+
+
+        const todo = ()=>{
+                let inputValue = getInput.value;
+                
+                let create = document.createElement('p');
+                create.textContent = inputValue;
+                getDiv.append(create)
+                getInput.value = ""
+            }
+
+            getDiv.addEventListener('click',(e)=>{
+                e.target.remove()
+            })
+
+        getBtn.addEventListener('click',()=>{
+            todo()
+        })
+
+    </script>
+</body>
+</html>

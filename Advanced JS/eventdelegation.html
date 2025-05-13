@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Heading styling */
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            padding-top: 20px;
+        }
+
+        /* List styling */
+        #get {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+
+        #get li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #get li:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        #get li:active {
+            background-color: #45a049;
+        }
+        #listValue {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #555;
+            background-color: #e7f4e7;
+            border: 1px solid #4CAF50;
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Which programming language do you like most?</h1>
+    <ul id="get">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ul>
+        <p id="listValue"></p>
+    <script>
+        const eventDelegation = (e) => {
+            document.getElementById('listValue').innerHTML = `My fav programming language is ${e.target.innerHTML}`
+        }
+        document.getElementById("get").addEventListener('click', eventDelegation);
+    </script>
+</body>
+</html>

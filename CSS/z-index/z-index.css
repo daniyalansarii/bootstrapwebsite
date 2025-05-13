@@ -1,0 +1,41 @@
+.parent{
+    width: 100%;
+    height: 500px;
+    background-color: palevioletred;
+    position: relative;
+}
+p{
+    background-image: linear-gradient(to left,rgb(233, 233, 65),orange);
+    height: 50px;
+    border: 4px solid salmon;
+}
+
+.child{
+    width: 20%;
+    height: 100px;
+    background: linear-gradient(to right, #3cd3ad, #4cb8c4);
+    margin-bottom: 5px;
+    position: absolute;
+    box-shadow: 2px 2px 2px 3px black;
+}
+
+.child2{
+    z-index: 2;
+}
+
+/* .child2{
+    right: 0;
+}
+
+.child3{
+    bottom: 0;
+}
+
+.child4{
+    bottom: 0;
+    right: 0;
+}
+.child5{
+    left: 40%;
+    top: 40%;
+} */

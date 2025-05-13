@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding DOM</title>
+</head>
+<body>
+    <h1>Understanding DOM</h1>
+    <p>It is a tree like structure</p>
+    <p>Go to console</p>
+
+
+    <script>
+        console.log(document)
+
+        //child nodes return list of all document it means everything including spaces,tabs
+        console.log(document.body.childNodes);
+
+        //children it returns only HTML elements
+
+        console.log(document.body.children);
+
+        //first element child it return HTML element
+
+        console.log(document.body.firstElementChild)
+
+        //first child it return node list
+
+        console.log(document.body.firstChild);
+
+        //last element child
+
+        console.log(document.body.lastElementChild);
+        
+        //last child
+        console.log(document.body.lastChild);
+        
+        
+
+        
+
+        
+    </script>
+</body>
+</html>

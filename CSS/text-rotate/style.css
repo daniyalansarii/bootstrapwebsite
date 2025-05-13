@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    text-shadow: 5px 5px 20px red;
+    font-size: 72px;
+    background: -webkit-linear-gradient(red, yellow,orange,red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rotate 0.5s linear  infinite alternate;
+    -webkit-animation: rotate 0.5s linear  infinite alternate;
+}
+
+@keyframes rotate {
+    0%{
+        rotate: 15deg;
+    }
+    50%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: -15deg;
+    }
+}

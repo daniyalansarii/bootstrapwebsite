@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get HTML element through JS</h1>
+
+    <p id="para">Get element through id</p>
+
+    <p class="list">Get element through class</p>
+
+    <h2>Hello</h2>
+    <h2>world</h2>
+
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+
+    <h3>Go to console</h3>
+
+    <script>
+        //through ID
+        let findingElementThroughId = document.getElementById("para")
+        console.log(findingElementThroughId);
+        console.log(findingElementThroughId.innerHTML); //this method give content inside of tag
+        
+        // through classname
+        let findingElementThroughClassName = document.getElementsByClassName("list")
+        console.log(findingElementThroughClassName);
+        console.log(...findingElementThroughClassName); //we use spread operator for access  value 
+        
+        //through for of loop we can access inner HTML
+        for(let elem of findingElementThroughClassName){
+            console.log(elem.innerHTML);
+        }
+
+        // through tagname
+        let findingElementThroughTagName = document.getElementsByTagName('h2')
+        console.log(findingElementThroughTagName);
+
+        for(let item of findingElementThroughTagName){
+            console.log(item.innerHTML);
+        }
+
+
+        //through query selector
+
+        let findingElementThroughQuery = document.querySelector('li')
+        console.log(findingElementThroughQuery);
+        console.log(findingElementThroughQuery.innerHTML);
+
+        //we can access all lis
+        let findingElementThroughQueryAll = document.querySelectorAll('li')
+        console.log(findingElementThroughQueryAll);
+
+        findingElementThroughQueryAll.forEach((item)=>{
+            console.log(item.innerHTML);
+            
+        })
+
+        
+        
+    </script>
+</body>
+</html>

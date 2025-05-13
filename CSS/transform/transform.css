@@ -1,0 +1,38 @@
+.translate{
+    width: 10%;
+    aspect-ratio: 1;
+    background-color: lightcoral;
+    border-radius: 50%;
+    transition: all 1s ease-in;
+}
+.translate:hover{
+    transform: translateX(50vw);
+    cursor: pointer;
+}
+.scale{
+    width: 10%;
+    aspect-ratio: 1;
+    background-color: lightcoral;
+    border-radius: 50%;
+    transition: all 1s ease-in;
+}
+.scale:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.rotate{
+    width: 10%;
+    aspect-ratio: 1;
+    background-color: lightcoral;
+    transition: all 1s ease-in;
+}
+.rotate:hover{
+    transform: rotate(80deg);
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+}

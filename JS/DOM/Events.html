@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 10%;
+            height: 100px;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            background-color: red;
+        }
+        .addTransition{
+            transition: all 0.2s linear;
+            translate: 50%;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline event -->
+    <button onclick="alert('hello')">Click</button>
+
+    <!-- DOM event handler -->
+     <button class="btn">Double Click me</button>
+
+     <div class="box"></div>
+        <button class="get">Click</button>
+
+        <!-- keyboard Event -->
+        <div>
+        <input type="text" id="text">
+        <p class="eventkey">Key</p>
+        <p class="eventtype">key</p>
+        <p class="eventcode">key</p>
+        <p class="charcode">key</p>
+    </div>
+
+     <script>
+        let btn = document.querySelector('.btn');
+        btn.addEventListener('dblclick',()=>{
+            alert('Welcome To JS');
+        });
+
+        let box = document.querySelector('.box');
+        let button = document.querySelector('.get');
+
+        button.addEventListener('click',()=>{
+            // box.style.backgroundColor = 'orange'
+            // box.style.borderRadius = '50%'
+            box.classList.add('addTransition')
+        })
+
+        let input = document.getElementById('text')
+        let eventkey = document.querySelector('.eventkey')
+        let eventtype = document.querySelector('.eventtype')
+        let eventcode = document.querySelector('.eventcode')
+        let eventchode = document.querySelector('.charcode')
+
+        const handleKeyboardEvents = (e)=>{
+            
+            eventkey.innerHTML = `Key press ${e.key}`
+            eventtype.innerHTML = `Key type ${e.type}`
+            eventcode.innerHTML = `Key code ${e.code}`
+            eventchode.innerHTML = `Key code ${e.key.charCodeAt(0)}`
+            
+        }
+        input.addEventListener('keyup',handleKeyboardEvents)
+       
+     </script>
+</body>
+</html>
